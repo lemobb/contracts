@@ -1,0 +1,104 @@
+{
+  "version": "v1",
+  "description": "Canonical pricing plans for Lemobb apps (aligned with lemobb.com pricing page).",
+  "currency": "USD",
+  "billingInterval": "month",
+  "plans": [
+    {
+      "id": "launch",
+      "name": "Launch",
+      "status": "active",
+      "pricing": {
+        "type": "subscription",
+        "amount": 149,
+        "currency": "USD",
+        "interval": "month"
+      },
+      "limits": {
+        "users": 100
+      },
+      "mobileApp": {
+        "included": false,
+        "addOn": {
+          "available": true,
+          "amount": 99,
+          "currency": "USD",
+          "interval": "month"
+        }
+      },
+      "mobbPay": {
+        "transactionFeeRate": 0.05
+      },
+      "marketing": {
+        "recommended": false
+      }
+    },
+    {
+      "id": "growth",
+      "name": "Growth",
+      "status": "active",
+      "pricing": {
+        "type": "subscription",
+        "amount": 399,
+        "currency": "USD",
+        "interval": "month"
+      },
+      "limits": {
+        "users": 500
+      },
+      "mobileApp": {
+        "included": true
+      },
+      "mobbPay": {
+        "transactionFeeRate": 0.05
+      },
+      "marketing": {
+        "recommended": true
+      }
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "status": "active",
+      "pricing": {
+        "type": "subscription",
+        "amount": 999,
+        "currency": "USD",
+        "interval": "month"
+      },
+      "limits": {
+        "users": 1500
+      },
+      "mobileApp": {
+        "included": true
+      },
+      "mobbPay": {
+        "transactionFeeRate": 0.04
+      },
+      "marketing": {
+        "recommended": false
+      }
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "status": "active",
+      "pricing": {
+        "type": "custom_quote"
+      },
+      "limits": {
+        "users": "unlimited"
+      },
+      "mobileApp": {
+        "included": true,
+        "delivery": "full_custom"
+      },
+      "mobbPay": {
+        "transactionFeeRate": "negotiated"
+      },
+      "marketing": {
+        "recommended": false
+      }
+    }
+  ]
+}
