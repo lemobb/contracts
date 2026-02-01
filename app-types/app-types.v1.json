@@ -1,29 +1,119 @@
 {
   "version": "v1",
-  "description": "Canonical definitions of application types supported by the Lemobb platform",
+  "description": "Canonical application types supported by the Lemobb platform, aligned with publicly available modules on lemobb.com.",
   "appTypes": [
     {
-      "id": "marketplace",
-      "name": "Marketplace App",
-      "description": "Multi-sided platform enabling buyers and sellers to transact",
+      "id": "rides_transport",
+      "name": "Rides & Transport",
+      "tagline": "Your own branded transportation service.",
+      "category": "on_demand",
       "capabilities": [
         "user_profiles",
-        "product_listings",
+        "geolocation",
+        "real_time_matching",
         "payments",
-        "reviews",
+        "ratings_reviews",
         "analytics"
+      ],
+      "monetization": [
+        "transaction_fee",
+        "subscription"
       ]
     },
     {
-      "id": "social",
-      "name": "Social App",
-      "description": "Community-driven application focused on social interaction",
+      "id": "rentals_booking",
+      "name": "Rentals & Booking",
+      "tagline": "Digital booking and equipment rental simplified.",
+      "category": "booking",
+      "capabilities": [
+        "inventory_management",
+        "availability_calendar",
+        "reservations",
+        "payments",
+        "notifications",
+        "analytics"
+      ],
+      "monetization": [
+        "transaction_fee",
+        "subscription"
+      ]
+    },
+    {
+      "id": "store_delivery",
+      "name": "Store & Delivery",
+      "tagline": "Sell and deliver without middleman high commissions.",
+      "category": "commerce",
+      "capabilities": [
+        "product_catalog",
+        "orders",
+        "delivery_management",
+        "payments",
+        "promotions",
+        "analytics"
+      ],
+      "monetization": [
+        "transaction_fee",
+        "subscription"
+      ]
+    },
+    {
+      "id": "subscription_clubs",
+      "name": "Subscription Clubs",
+      "tagline": "Recurring revenue for recurring value.",
+      "category": "subscription",
+      "capabilities": [
+        "membership_management",
+        "recurring_billing",
+        "content_access_control",
+        "payments",
+        "engagement_metrics",
+        "analytics"
+      ],
+      "monetization": [
+        "subscription"
+      ]
+    },
+    {
+      "id": "social_communities",
+      "name": "Social Communities",
+      "tagline": "Engage your audience in your own private space.",
+      "category": "social",
       "capabilities": [
         "user_profiles",
         "feeds",
+        "groups",
         "messaging",
+        "moderation_tools",
         "engagement_metrics"
+      ],
+      "monetization": [
+        "subscription",
+        "premium_features"
+      ]
+    },
+    {
+      "id": "events_tickets",
+      "name": "Events & Tickets",
+      "tagline": "Complete management of digital ticket sales.",
+      "category": "events",
+      "capabilities": [
+        "event_management",
+        "ticketing",
+        "check_in",
+        "payments",
+        "promotions",
+        "analytics"
+      ],
+      "monetization": [
+        "transaction_fee",
+        "subscription"
       ]
     }
-  ]
+  ],
+  "designPrinciples": {
+    "extensible": true,
+    "eventDriven": true,
+    "billingAware": true,
+    "technologyAgnostic": true
+  }
 }
