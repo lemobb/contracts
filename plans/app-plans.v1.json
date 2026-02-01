@@ -1,8 +1,20 @@
 {
   "version": "v1",
-  "description": "Canonical pricing plans for Lemobb apps (aligned with lemobb.com pricing page).",
+  "description": "Canonical pricing plans for Lemobb applications, including limits, billing rules, and add-on compatibility policies.",
   "currency": "USD",
   "billingInterval": "month",
+
+  "addonPolicy": {
+    "model": "plan_compatibility",
+    "default": "allowed",
+    "restrictions": {
+      "launch": ["white_label_license"],
+      "growth": [],
+      "pro": [],
+      "enterprise": []
+    }
+  },
+
   "plans": [
     {
       "id": "launch",
@@ -11,7 +23,6 @@
       "pricing": {
         "type": "subscription",
         "amount": 149,
-        "currency": "USD",
         "interval": "month"
       },
       "limits": {
@@ -19,10 +30,9 @@
       },
       "mobileApp": {
         "included": false,
-        "addOn": {
-          "available": true,
+        "addOnAvailable": true,
+        "addOnPricing": {
           "amount": 99,
-          "currency": "USD",
           "interval": "month"
         }
       },
@@ -40,7 +50,6 @@
       "pricing": {
         "type": "subscription",
         "amount": 399,
-        "currency": "USD",
         "interval": "month"
       },
       "limits": {
@@ -63,7 +72,6 @@
       "pricing": {
         "type": "subscription",
         "amount": 999,
-        "currency": "USD",
         "interval": "month"
       },
       "limits": {

@@ -1,0 +1,97 @@
+{
+  "version": "v1",
+  "description": "Canonical definition of technical add-ons available in the Lemobb platform.",
+  "addons": [
+    {
+      "id": "ios_android_build",
+      "name": "iOS / Android Build",
+      "category": "mobile",
+      "pricing": {
+        "oneTime": 499,
+        "subscription": {
+          "amount": 99,
+          "interval": "month"
+        }
+      },
+      "events": [
+        "addon.attached",
+        "addon.detached",
+        "billing.addon.charged"
+      ]
+    },
+    {
+      "id": "push_notifications",
+      "name": "Push Notifications",
+      "category": "communication",
+      "pricing": {
+        "subscription": {
+          "amount": 29,
+          "interval": "month",
+          "limit": "10000"
+        }
+      }
+    },
+    {
+      "id": "professional_branding",
+      "name": "Professional Branding",
+      "category": "branding",
+      "pricing": {
+        "subscriptionRange": {
+          "min": 19,
+          "max": 49,
+          "interval": "month"
+        }
+      }
+    },
+    {
+      "id": "multi_app_admin",
+      "name": "Multi-App Admin",
+      "category": "administration",
+      "pricing": {
+        "subscription": {
+          "amount": 149,
+          "interval": "month",
+          "unit": "per_app"
+        }
+      }
+    },
+    {
+      "id": "advanced_analytics",
+      "name": "Advanced Analytics",
+      "category": "analytics",
+      "pricing": {
+        "subscriptionRange": {
+          "min": 49,
+          "max": 99,
+          "interval": "month"
+        }
+      }
+    },
+    {
+      "id": "sla_support",
+      "name": "SLA Support",
+      "category": "support",
+      "pricing": {
+        "subscriptionRange": {
+          "min": 99,
+          "max": 299,
+          "interval": "month"
+        }
+      }
+    },
+    {
+      "id": "white_label_license",
+      "name": "White-Label License",
+      "category": "licensing",
+      "pricing": {
+        "oneTime": 1499
+      }
+    }
+  ],
+  "designPrinciples": {
+    "attachable": true,
+    "billable": true,
+    "eventDriven": true,
+    "planIndependent": true
+  }
+}

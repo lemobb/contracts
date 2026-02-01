@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "description": "Canonical event taxonomy for the Lemobb event-driven platform, including apps, plans, add-ons, billing and analytics.",
+  "domains": {
+    "app": [
+      "app.created",
+      "app.updated",
+      "app.published",
+      "app.archived"
+    ],
+    "plan": [
+      "plan.assigned",
+      "plan.changed"
+    ],
+    "addon": [
+      "addon.available",
+      "addon.attached",
+      "addon.detached",
+      "addon.upgraded",
+      "addon.downgraded"
+    ],
+    "billing": [
+      "billing.subscription.started",
+      "billing.subscription.updated",
+      "billing.subscription.canceled",
+      "billing.addon.charged",
+      "billing.addon.failed"
+    ],
+    "user": [
+      "user.registered",
+      "user.authenticated"
+    ],
+    "transaction": [
+      "transaction.initiated",
+      "transaction.completed",
+      "transaction.failed"
+    ],
+    "analytics": [
+      "analytics.event.recorded"
+    ]
+  },
+  "principles": {
+    "naming": "domain.action",
+    "immutability": true,
+    "timeOrdered": true,
+    "addonFirstClass": true
+  }
+}
