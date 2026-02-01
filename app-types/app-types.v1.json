@@ -1,0 +1,29 @@
+{
+  "version": "v1",
+  "description": "Canonical definitions of application types supported by the Lemobb platform",
+  "appTypes": [
+    {
+      "id": "marketplace",
+      "name": "Marketplace App",
+      "description": "Multi-sided platform enabling buyers and sellers to transact",
+      "capabilities": [
+        "user_profiles",
+        "product_listings",
+        "payments",
+        "reviews",
+        "analytics"
+      ]
+    },
+    {
+      "id": "social",
+      "name": "Social App",
+      "description": "Community-driven application focused on social interaction",
+      "capabilities": [
+        "user_profiles",
+        "feeds",
+        "messaging",
+        "engagement_metrics"
+      ]
+    }
+  ]
+}
