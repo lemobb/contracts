@@ -1,0 +1,44 @@
+{
+  "event": "analytics.event.recorded",
+  "version": "v1",
+  "description": "Emitted when a platform event is recorded, normalized, and stored for analytics and learning purposes.",
+  "timestamp": "ISO-8601",
+  "idempotencyKey": "uuid",
+
+  "sourceEvent": {
+    "name": "event_name",
+    "version": "v1",
+    "occurredAt": "ISO-8601"
+  },
+
+  "app": {
+    "id": "app_uuid",
+    "type": "app_type_id",
+    "plan": "plan_id"
+  },
+
+  "entities": {
+    "addonId": "addon_id",
+    "userId": "user_id",
+    "transactionId": "transaction_id"
+  },
+
+  "metrics": {
+    "value": 99,
+    "currency": "USD",
+    "unit": "count | usd | percentage",
+    "category": "revenue | engagement | conversion | churn"
+  },
+
+  "dimensions": {
+    "environment": "production | staging",
+    "source": "dashboard | api | agent | system",
+    "region": "us-east-1",
+    "channel": "organic | paid | referral"
+  },
+
+  "actor": {
+    "type": "system | agent",
+    "id": "string"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "event": "addon.detached",
+  "version": "v1",
+  "description": "Emitted when an add-on is detached or deactivated from an application.",
+  "timestamp": "ISO-8601",
+  "idempotencyKey": "uuid",
+
+  "actor": {
+    "type": "user | system | agent",
+    "id": "string"
+  },
+
+  "app": {
+    "id": "app_uuid",
+    "type": "app_type_id",
+    "plan": "plan_id"
+  },
+
+  "addon": {
+    "id": "addon_id",
+    "category": "addon_category",
+    "pricingModel": "subscription | one_time",
+    "detachedAt": "ISO-8601"
+  },
+
+  "billing": {
+    "action": "stop_subscription | no_action",
+    "effectiveUntil": "ISO-8601"
+  },
+
+  "context": {
+    "source": "dashboard | api | agent",
+    "environment": "production | staging"
+  }
+}

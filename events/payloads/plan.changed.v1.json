@@ -1,0 +1,46 @@
+{
+  "event": "plan.changed",
+  "version": "v1",
+  "description": "Emitted when an application changes its subscription plan, including upgrades and downgrades.",
+  "timestamp": "ISO-8601",
+  "idempotencyKey": "uuid",
+
+  "actor": {
+    "type": "user | system | agent",
+    "id": "string"
+  },
+
+  "app": {
+    "id": "app_uuid",
+    "type": "app_type_id"
+  },
+
+  "plan": {
+    "previous": {
+      "id": "plan_id",
+      "usersLimit": 100
+    },
+    "current": {
+      "id": "plan_id",
+      "usersLimit": 500
+    },
+    "changeType": "upgrade | downgrade | renewal",
+    "effectiveFrom": "ISO-8601"
+  },
+
+  "billing": {
+    "currency": "USD",
+    "prorationApplied": true,
+    "nextBillingDate": "ISO-8601"
+  },
+
+  "impact": {
+    "addonsPolicyReevaluation": true,
+    "featuresRecalculated": true
+  },
+
+  "context": {
+    "source": "dashboard | api | agent",
+    "environment": "production | staging"
+  }
+}

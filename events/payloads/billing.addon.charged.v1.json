@@ -1,0 +1,40 @@
+{
+  "event": "billing.addon.charged",
+  "version": "v1",
+  "description": "Emitted when an add-on charge is successfully processed.",
+  "timestamp": "ISO-8601",
+  "idempotencyKey": "uuid",
+
+  "billing": {
+    "chargeId": "string",
+    "provider": "stripe",
+    "status": "succeeded | failed | pending",
+    "currency": "USD",
+    "amount": 99,
+    "interval": "month",
+    "oneTime": false,
+    "chargedAt": "ISO-8601"
+  },
+
+  "app": {
+    "id": "app_uuid",
+    "type": "app_type_id",
+    "plan": "plan_id"
+  },
+
+  "addon": {
+    "id": "addon_id",
+    "category": "addon_category",
+    "pricingModel": "subscription | one_time"
+  },
+
+  "actor": {
+    "type": "system | agent",
+    "id": "string"
+  },
+
+  "context": {
+    "environment": "production | staging",
+    "source": "billing_agent"
+  }
+}

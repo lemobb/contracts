@@ -1,0 +1,37 @@
+{
+  "event": "addon.attached",
+  "version": "v1",
+  "description": "Emitted when an add-on is attached to an application.",
+  "timestamp": "ISO-8601",
+  "idempotencyKey": "uuid",
+
+  "actor": {
+    "type": "user | system | agent",
+    "id": "string"
+  },
+
+  "app": {
+    "id": "app_uuid",
+    "type": "app_type_id",
+    "plan": "plan_id"
+  },
+
+  "addon": {
+    "id": "addon_id",
+    "category": "addon_category",
+    "pricingModel": "subscription | one_time",
+    "effectiveFrom": "ISO-8601"
+  },
+
+  "billing": {
+    "currency": "USD",
+    "amount": 99,
+    "interval": "month",
+    "oneTime": false
+  },
+
+  "context": {
+    "source": "dashboard | api | agent",
+    "environment": "production | staging"
+  }
+}
